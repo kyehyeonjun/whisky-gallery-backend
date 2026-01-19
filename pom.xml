@@ -71,6 +71,12 @@
 			<artifactId>json</artifactId>
 			<version>20240303</version>
 		</dependency>
+
+		<!-- Spring Boot Actuator (Health Check) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
