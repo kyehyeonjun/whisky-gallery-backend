@@ -2,15 +2,8 @@ services:
   - type: web
     name: whisky-gallery-backend
     runtime: java
-    region: singapore
     plan: free
-    branch: main
     build:
-      command: "./mvnw -B clean package -DskipTests"
+      command: "./mvnw clean package -DskipTests"
     start:
       command: "java -jar target/whisky-0.0.1-SNAPSHOT.jar"
-    envVars:
-      - key: RENDER_JAVA_VERSION
-        value: 17
-      - key: MAVEN_OPTS
-        value: "-Xmx256m"
