@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: whisky-gallery-backend
+    runtime: java
+    region: singapore
+    plan: free
+    branch: main
+    build:
+      command: "./mvnw clean package"
+    start:
+      command: "java -jar target/whisky-0.0.1-SNAPSHOT.jar"
