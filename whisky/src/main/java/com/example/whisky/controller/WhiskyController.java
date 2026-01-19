@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/whisky")
-@CrossOrigin(origins = "http://localhost:5173") // Vue 프론트엔드 주소 허용
 public class WhiskyController {
 
     private static final Logger logger = LoggerFactory.getLogger(WhiskyController.class);
