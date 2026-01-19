@@ -4,6 +4,4 @@
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
-    # Health Check 경로를 추가하여 Render가 서버 상태를 더 잘 확인하도록 합니다.
-    healthCheck:
-      path: /actuator/health
+    healthCheckPath: /actuator/health
