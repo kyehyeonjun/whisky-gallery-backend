@@ -23,7 +23,12 @@ public class WhiskyService {
     @Value("${scraping.api.key}")
     private String apiKey;
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
+
+    // AppConfig에 정의된 RestTemplate Bean이 생성자를 통해 주입됩니다.
+    public WhiskyService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Cacheable(value = "whiskyInfo", key = "#code")
     public WhiskyDTO getWhiskyInfo(String code) {

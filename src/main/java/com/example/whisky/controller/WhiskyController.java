@@ -15,8 +15,11 @@ public class WhiskyController {
 
     private static final Logger logger = LoggerFactory.getLogger(WhiskyController.class);
 
-    @Autowired
-    private WhiskyService whiskyService;
+    private final WhiskyService whiskyService;
+
+    public WhiskyController(WhiskyService whiskyService) {
+        this.whiskyService = whiskyService;
+    }
 
     @GetMapping("/{code}")
     public ResponseEntity<WhiskyDTO> getWhisky(@PathVariable String code) {
