@@ -69,6 +69,14 @@ public class WhiskyService {
         dto.setDistillery(safeSelectText(doc, "dt:contains(Distillery) + dd"));
         dto.setBottler(safeSelectText(doc, "dt:contains(Bottler) + dd"));
         dto.setStrength(safeSelectText(doc, "dt:contains(Strength) + dd"));
+
+        // 이전에 누락되었던 상세 정보들을 다시 추가합니다.
+        dto.setSeries(safeSelectText(doc, "dt:contains(Bottling serie) + dd"));
+        dto.setAge(safeSelectText(doc, "dt:contains(Stated Age) + dd"));
+        dto.setBottled(safeSelectText(doc, "dt:contains(Bottled) + dd"));
+        dto.setCaskType(safeSelectText(doc, "dt:contains(Cask) + dd"));
+        dto.setCasknumber(safeSelectText(doc, "dt:contains(Casknumber) + dd"));
+        dto.setSize(safeSelectText(doc, "dt:contains(Size) + dd"));
         return dto;
     }
 

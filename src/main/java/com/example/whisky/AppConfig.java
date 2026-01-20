@@ -1,4 +1,4 @@
-package com.example.whisky.config;
+package com.example.whisky;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

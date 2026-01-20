@@ -12,8 +12,11 @@ public class WhiskyDTO {
     private String category;
     private String distillery;
     private String bottler;
-    private String series;
-    private String age;
-    private String caskType;
+    private String series; // Bottling series
+    private String age; // Stated Age
+    private String bottled;
+    private String caskType; // Casktype
+    private String casknumber;
     private String strength;
+    private String size;
 }
